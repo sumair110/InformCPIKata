@@ -23,6 +23,13 @@ namespace InformCPIKata
 
 			services.AddDbContext<ContactDbContext>(options =>
 				options.UseSqlServer(Configuration.GetConnectionString("ContactDbConnection")));
+
+			services.AddAntiforgery(options =>
+			{
+				options.Cookie.Name = "MyAntiforgeryCookie";
+				options.HeaderName = "X-CSRF-TOKEN";
+				options.SuppressXFrameOptionsHeader = true;
+			});
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

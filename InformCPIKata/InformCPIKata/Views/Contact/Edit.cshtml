@@ -4,11 +4,13 @@
     ViewData["Title"] = "Edit Contact";
 }
 
-<h2>Edit Contact</h2>
-
 @using (Html.BeginForm("Edit", "Contact", FormMethod.Post, new { @class = "form-horizontal" }))
 {
     @Html.AntiForgeryToken()
+
+	<h4>Edit Create</h4>
+	<hr />
+	@Html.ValidationSummary(true)
 
     <div class="form-group">
         @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })

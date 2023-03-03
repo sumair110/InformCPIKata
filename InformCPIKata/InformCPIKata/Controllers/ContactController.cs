@@ -63,7 +63,7 @@ namespace InformCPIKata.Controllers
 				{
 					var existingContact = await _context.Contacts.FirstOrDefaultAsync(c => c.Phone == contact.Phone);
 
-					var existingEmail = await _context.Contacts.FirstOrDefaultAsync(c => c.Email == contact.Email);
+					var existingEmail = await _context.Contacts.FirstOrDefaultAsync(c => c.Email.ToLower() == contact.Email.ToLower());
 
 					if (existingContact != null)
 					{
@@ -130,29 +130,28 @@ namespace InformCPIKata.Controllers
 				{
 					try
 					{
-						var existingCustomer = await _context.Contacts.FirstOrDefaultAsync(c => c.Id == id);
+						// Check for duplicate Email and phone number
+						var isPhoneExists = _context.Contacts.Any(c => c.Id != contact.Id && c.Phone == contact.Phone);
+						var isEmailExists = _context.Contacts.Any(c => c.Id != contact.Id && c.Email.ToLower() == contact.Email.ToLower());
 
-						if (existingCustomer == null)
+						if (isEmailExists)
 						{
-							return NotFound();
-						}
-
-						if (existingCustomer.Phone != contact.Phone &&
-							await _context.Contacts.AnyAsync(c => c.Id != id && c.Phone == contact.Phone))
-						{
-							ModelState.AddModelError("Phone", "This phone number is already taken.");
+							ModelState.AddModelError(string.Empty, "Contact with same name already exists.");
 							return View(contact);
 						}
 
-						if (existingCustomer.Email != contact.Email &&
-							await _context.Contacts.AnyAsync(c => c.Id != id && c.Email == contact.Email))
+						if (isPhoneExists)
 						{
-							ModelState.AddModelError("Email", "This email is already taken.");
+							ModelState.AddModelError(string.Empty, "Contact with same phone number already exists.");
 							return View(contact);
 						}
 
-						_context.Update(contact);
-						await _context.SaveChangesAsync();
+						if (ModelState.IsValid)
+						{
+							_context.Update(contact);
+							_context.SaveChanges();
+							return RedirectToAction(nameof(Index));
+						}
 					}
 					catch (DbUpdateConcurrencyException)
 					{

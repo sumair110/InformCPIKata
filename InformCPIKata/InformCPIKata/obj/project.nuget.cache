@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1qLqbYg3961dkd+mQEm7/jSsKptdSveyw037nHW0uBLaYO8A6D3tpWXOupDFeZMLcip5P2vLg3+Oh+qyEzSDAw==",
+  "dgSpecHash": "t7kdM69MOFnKeDc+h6KiMPKgbMjr1Gg+JNMcHGOi0cVmt/lsd1XlpiUskg5SrOonAzQGKoE5ILCKqNO+eNGGWA==",
   "success": true,
-  "projectFilePath": "E:\\Sumair\\DotNetPractise\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj",
+  "projectFilePath": "E:\\Sumair\\DotNetPractise\\Git\\InformCPIKata\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sumair Ali\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Sumair Ali\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

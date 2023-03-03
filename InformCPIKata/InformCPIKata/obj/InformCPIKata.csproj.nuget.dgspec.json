@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Sumair\\DotNetPractise\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj": {}
+    "E:\\Sumair\\DotNetPractise\\Git\\InformCPIKata\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj": {}
   },
   "projects": {
-    "E:\\Sumair\\DotNetPractise\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj": {
+    "E:\\Sumair\\DotNetPractise\\Git\\InformCPIKata\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Sumair\\DotNetPractise\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj",
+        "projectUniqueName": "E:\\Sumair\\DotNetPractise\\Git\\InformCPIKata\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj",
         "projectName": "InformCPIKata",
-        "projectPath": "E:\\Sumair\\DotNetPractise\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj",
+        "projectPath": "E:\\Sumair\\DotNetPractise\\Git\\InformCPIKata\\InformCPIKata\\InformCPIKata\\InformCPIKata.csproj",
         "packagesPath": "C:\\Users\\Sumair Ali\\.nuget\\packages\\",
-        "outputPath": "E:\\Sumair\\DotNetPractise\\InformCPIKata\\InformCPIKata\\obj\\",
+        "outputPath": "E:\\Sumair\\DotNetPractise\\Git\\InformCPIKata\\InformCPIKata\\InformCPIKata\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
